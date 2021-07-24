@@ -44,7 +44,7 @@ class Student:
                 return True
             return False
         else:
-            if self.grade< other.grade:
+            if self.grade < other.grade:
                 return True
             return False
 
@@ -62,16 +62,3 @@ class Student:
 
     def __ge__(self, other) -> bool:
         return self > other or self == other
-
-
-school = School()
-school.add_student(name="Peter", grade=2)
-school.add_student(name="Anna", grade=1)
-school.add_student(name="Barb", grade=1)
-school.add_student(name="Zoe", grade=2)
-school.add_student(name="Alex", grade=2)
-school.add_student(name="Jim", grade=3)
-school.add_student(name="Charlie", grade=1)
-expected = ["Anna", "Barb", "Charlie", "Alex", "Peter", "Zoe", "Jim"]
-print(school.roster())
-print(expected)
